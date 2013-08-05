@@ -8,6 +8,11 @@ just edit things like thumbnail sizes, header images,
 sidebars, comments, ect.
 */
 
+// Create Slider Post Type
+require( get_template_directory() . '/library/slider/slider_post_type.php' );
+// Create Slider
+require( get_template_directory() . '/library/slider/slider.php' );
+
 /************* INCLUDE NEEDED FILES ***************/
 
 /*
@@ -75,39 +80,75 @@ you like. Enjoy!
 // Sidebars & Widgetizes Areas
 function bones_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'bonestheme'),
-		'description' => __('The first (primary) sidebar.', 'bonestheme'),
+		'id' => 'home',
+		'name' => __('Home', 'bonestheme'),
+		'description' => __('The home page sidebar.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
-
-	/*
-	to add more sidebars or widgetized areas, just copy
-	and edit the above sidebar code. In order to call
-	your new sidebar just use the following code:
-
-	Just change the name to whatever your new
-	sidebar's id is, for example:
 
 	register_sidebar(array(
-		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'bonestheme'),
-		'description' => __('The second (secondary) sidebar.', 'bonestheme'),
+		'id' => 'teamwork',
+		'name' => __('Teamwork', 'bonestheme'),
+		'description' => __('The teamwork page sidebar.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
 
-	To call the sidebar in your template, you can just copy
-	the sidebar.php file and rename it to your sidebar's name.
-	So using the above example, it would be:
-	sidebar-sidebar2.php
+register_sidebar(array(
+		'id' => 'design',
+		'name' => __('Design', 'bonestheme'),
+		'description' => __('The design page sidebar.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
 
-	*/
+	register_sidebar(array(
+		'id' => 'about',
+		'name' => __('About Us', 'bonestheme'),
+		'description' => __('The employee page sidebar.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'services',
+		'name' => __('Services', 'bonestheme'),
+		'description' => __('The services page sidebar.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'green',
+		'name' => __('PDC Green', 'bonestheme'),
+		'description' => __('The PDC green page sidebar.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'projects',
+		'name' => __('Projects', 'bonestheme'),
+		'description' => __('The projects page sidebar.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	
 } // don't remove this bracket!
 
 /************* COMMENT LAYOUT *********************/

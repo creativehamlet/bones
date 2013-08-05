@@ -31,33 +31,93 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
 
-	#logo {}
+	#logo {
+
+		img {
+			width:133px;
+			margin-left:0;
+		}
+	}
+}
 
 /*********************
 NAVIGATION STYLES
 *********************/
 
+#menu-item-94 a { 
+	background-color: transparentize($pdc-pink, 0); 
+	color: $white;
+	&:hover {
+		background-color: transparentize($pdc-pink, .1);
+	}
+}
+
+#menu-item-83 a { 
+	background-color: transparentize($pdc-pink, .2); 
+	color: transparentize($white, .1);
+	&:hover {
+		background-color: transparentize($pdc-pink, .3);
+	}
+}
+
+#menu-item-89 a { 
+	background-color: transparentize($pdc-pink, .4); 
+	color: $pdc-green;
+	&:hover {
+		background-color: transparentize($pdc-pink, .5);
+	}
+}
+
+#menu-item-84 a { 
+	background-color: transparentize($pdc-pink, .6); 
+	color: $pdc-pink;
+	&:hover {
+		background-color: transparentize($pdc-pink, .7);
+	}
+}
+
+#menu-item-82 a { 
+	background-color: transparentize($pdc-pink, .8); 
+	color: $pdc-pink;
+	&:hover {
+		background-color: transparentize($pdc-pink, .9);
+	}
+}
+
+#menu-item-168 a { 
+	background-color: transparentize($pdc-pink, .9); 
+	color: $pdc-pink;
+	&:hover {
+		background-color: transparentize($pdc-pink, .8);
+	}
+}
+
 .nav {
-	background: #eee;
+	background: transparent;
 	border: 0;
 
 	li {
 		float: left;
 		position: relative;
+		width: 16.6%;
+		padding-right: 0.2%;
+		text-align: center;
 
 		a {
 			border-bottom: 0;
+			text-transform: uppercase;
+			border: 0;
 
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-			&:hover, &:focus {
-				background-color: #dedede;
-
+			&:hover {
+				background-color: $link-hover;
 			}
+			&:first-child {}
 		}
 
 		&:first-child {}
@@ -69,19 +129,20 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
+			border: 0px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			display: none;
 			z-index: 8999;
 
 			li {
+				width: 10.5em;
 
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
+					width: 10.5em;
 					border-bottom: 1px solid #ccc;
 
 					&:hover,
@@ -137,11 +198,10 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+	margin-top: 0;
 }
 
 	.widgettitle {
-		border-bottom: 2px solid #444;
 		margin-bottom: 0.75em;
 	}
 
@@ -254,6 +314,16 @@ SIDEBARS & ASIDES
 	.widget_text {}
 	.textwidget p {}
 
+/*********************
+PORTFOLIO STYLES
+*********************/
+
+.portfolio-wrap.twelvecol {
+	margin-left: 0;
+	.sixcol {
+		margin-left: 1%;
+	}
+}
 
 /*********************
 FOOTER STYLES
@@ -280,3 +350,9 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+.m-hide {
+  display : inline !important; 
+  visibility : visible; }
+
+.t-hide {
+  @include hidden; }

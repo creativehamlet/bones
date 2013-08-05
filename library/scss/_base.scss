@@ -16,9 +16,9 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $advent;
 	font-size: 100%;
-	line-height: 1.5;
+	line-height: 1.2;
 	color: #565656;
 }
 
@@ -68,8 +68,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
-	margin: 0 auto;
+	width: 100%;
 }
 
 /*********************
@@ -120,13 +119,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
-	line-height: 1.333em;
+	font-size: 1.5em;
+	line-height: 1em;
 }
 
 h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
+	font-size: 1.3em;
+	line-height: 0.8em;
 	margin-bottom: 0.375em;
 }
 
@@ -150,9 +149,25 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
 
-	#logo {}
+	#logo {
+			.h1 {
+			font-size: 1.5em;
+			line-height: 0.5em;
+		}
+
+		img {
+			width:133px;
+			margin-left:33%;
+		}
+	}
+
+	p {
+		margin: 0.2em 0;
+	}
+}
+
 
 /*********************
 NAVIGATION STYLES
@@ -167,17 +182,16 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
-	border-bottom: 0;
+	border-bottom: 0;	
 
 	li {
 
 		a {
 			display: block;
 			text-decoration: none;
-			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			padding: 0.5em 0.5em;
+			background-color: $pdc-pink;
+			border: 1px solid $link-hover;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -188,6 +202,11 @@ and more scalable.
 			&:hover, &:focus {
 
 			}
+
+			&:first-child { color: $white; }
+			&:nth-child {}
+			&:last-child {}
+
 		}
 
 		&:first-child {}
@@ -243,7 +262,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 2.2em;
+	margin-top: 1em;
 }
 
 		.hentry {
@@ -781,7 +800,12 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
+#home-sidebar {
+	width: 100%;
+	margin-top: -5em;
+}
+
+.sidebar { }
 
 	.widgettitle {}
 
@@ -835,4 +859,6 @@ FOOTER STYLES
 
 
 	.copyright {}
-
+	
+.m-hide {
+@include hidden; }

@@ -8,3 +8,23 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop. 
 
 ******************************************************************/
+
+/*********************
+MAIN STYLES
+*********************/
+
+.wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*********************
+HIDE STYLES
+*********************/
+
+.t-hide {
+display : inline-block !important; 
+visibility : visible; }
+
+.d-hide {
+@include hidden; }

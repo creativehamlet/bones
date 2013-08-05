@@ -2,6 +2,10 @@
 
 				<div id="inner-footer" class="wrap clearfix">
 
+					<nav role="navigation" class="t-hide d-hide">
+						<?php bones_main_nav(); ?>
+					</nav>
+
 					<nav role="navigation">
 							<?php bones_footer_links(); ?>
 									</nav>

@@ -59,10 +59,12 @@ $alert-blue:        #d5edf8;
 $black:             #000;
 $white:             #fff;
 
-$bones-pink:        #f01d4f;
-$bones-blue:        #1990db;
+$pdc-red:        #630a34;
+$pdc-pink:				#7e1d4a;
+$pdc-blue:        #1990db;
+$pdc-green:				#b9d16f;
 
-$link-color:        $bones-pink;
+$link-color:        $pdc-pink;
 $link-hover:        darken($link-color, 9%);
 
 /*
@@ -78,6 +80,7 @@ TYPOGRAPHY
 
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$advent:						'Advent Pro', sans-serif;
 
 
 /* 	To embed your own fonts, use this syntax
@@ -235,16 +238,55 @@ BUTTONS
 }
 
 .blue-button, .blue-button:visited {
-	border-color: darken($bones-blue, 10%);
-	text-shadow: 0 1px 1px darken($bones-blue, 10%);
-	@include css-gradient( $bones-blue, darken($bones-blue, 5%) );
-	box-shadow: inset 0 0 3px lighten($bones-blue, 16%);
+	border-color: darken($pdc-blue, 10%);
+	text-shadow: 0 1px 1px darken($pdc-blue, 10%);
+	@include css-gradient( $pdc-blue, darken($pdc-blue, 5%) );
+	box-shadow: inset 0 0 3px lighten($pdc-blue, 16%);
 
 	&:hover, &:focus {
-		border-color: darken($bones-blue, 15%);
-		@include css-gradient( darken($bones-blue, 4%), darken($bones-blue, 10%) );
+		border-color: darken($pdc-blue, 15%);
+		@include css-gradient( darken($pdc-blue, 4%), darken($pdc-blue, 10%) );
 	}
 	&:active {
-		@include css-gradient( darken($bones-blue, 5%), $bones-blue );
+		@include css-gradient( darken($pdc-blue, 5%), $pdc-blue );
 	}
+}
+
+/*********************
+HIDDEN
+*********************/
+
+@mixin hidden {
+display : none !important;
+visibility : hidden; }
+
+@mixin hide-text {
+text-indent : 100%;
+white-space : nowrap;
+overflow : hidden; }
+
+@mixin invisible {
+visibility : hidden; }
+
+@mixin visuallyhidden {
+overflow : hidden;
+position : absolute;
+clip : rect(0 0 0 0);
+height : 1px;
+width : 1px;
+margin : -1px;
+padding : 0;
+border : 0;
+
+&.focusable {
+
+&:active,
+&:focus {
+position : static;
+clip : auto;
+height : auto;
+width : auto;
+margin : 0;
+overflow: visible; } 
+} 
 }
